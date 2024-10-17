@@ -1,0 +1,11 @@
+{% extends "PanelControl/base.html" %} {% load static %}  {% block content %}
+{% load crispy_forms_tags %}
+<form method=="POST" action="" style="color:white">
+{% csrf_token %}
+<div style="width:45%; margin:auto">
+{{ form | crispy }}
+<button type="submit" class="btn btn-success">Bienvenido perro</button>
+</div>
+</form>
+
+{% endblock %}

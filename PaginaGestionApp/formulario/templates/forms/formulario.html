@@ -1,0 +1,17 @@
+{% extends "PanelControl/base.html" %} {% load static %} {% block content %}
+
+<div class="contenedorFormulario">
+  {% comment %} {% if "recibido" in request.GET %} {% endcomment %}
+  <p style="color: red; text-align: center">
+    INFORMACION CARGADA EN EL SITEMA SATISFACTORIAMENTE!!!!
+  </p>
+  {% comment %} {% endif %} {% endcomment %}
+  <form action="" method="POST" style="text-align: right; margin: 0px 10px">
+    {% csrf_token %}
+    <table class="textoTabla" style="margin: 40px auto">
+      {{all_data.as_table}}
+    </table>
+    <input type="submit" value="enviame todo !!!" style="width: 30%" />
+  </form>
+</div>
+{% endblock %}
